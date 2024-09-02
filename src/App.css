@@ -1,0 +1,216 @@
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: rgb(189, 236, 236)
+}
+
+header h1 {
+  margin-bottom: 0px; 
+  font-family: fantasy;
+}
+
+header h4 {
+  margin-bottom: 0px;
+}
+
+header h6 {
+  margin-bottom: 0px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background: rgb(189, 236, 236);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+body {
+  background-color: black;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+.map-container {
+  margin: 0px 100px 10px 100px;
+  border: 4px solid rgb(189, 236, 236);
+  border-radius: 5px;
+  height: 75vh;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.map-container {
+  display: flex;
+  background-color: black;
+}
+
+.marker-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.marker-btn img {
+  width: 30px;
+  height: 30px;
+  background: rgb(189, 236, 236);
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 53%;
+  background-image: url("../public/sand-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  border: 4px solid rgb(189, 236, 236);
+  border-radius: 4px;
+}
+
+.blog-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(7, 7, 7);
+  background-color: rgb(189, 236, 236);
+  color: black;
+  margin: 10px 10px 10px 10px;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.blog-header h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.blog-header h3 {
+  margin: 0px;
+}
+
+.blog-feed-btn {
+  align-self: flex-start;
+  margin: 3px 3px 0px 3px;
+}
+
+.feed-container {
+  overflow-y: scroll;
+  height: 58vh;
+  scrollbar-color: white rgb(189, 236, 236);
+  scrollbar-width: thin;
+}
+
+.options-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: 2px solid rgb(189, 236, 236);
+}
+
+.options-btn button {
+  background: none;
+  border: none;
+  color: black;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 3px;
+}
+
+.blog-post {
+  color:black;
+  background-color: white;
+  border: 2px solid rgb(231, 227, 223);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.blog-post h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.blog-post h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: small;
+}
+
+.blog-post p {
+  border-top: 2px solid black;
+  margin-top: 0px;
+  padding-top: 5px;
+}
+
+.no-post {
+  color: black;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.new-post-title {
+  text-align: center;
+  text-decoration: underline;
+  color: black;
+}
+
+.input-container input, textarea {
+  border-radius: 5px;
+  border: 1px solid black;
+  color: black;
+  width: 25vw;
+  margin-top: 5px;
+}
+
+.post-text {
+  height: 10vh;
+}
+
+.input-container label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.new-post-btn {
+  align-self: center;
+}
+
+.popup .mapboxgl-popup-content {
+  background-color: rgb(189, 236, 236);
+}
+
+.popup .mapboxgl-popup-close-button {
+  background-color: rgb(189, 236, 236);
+}
+
+.popup .mapboxgl-popup-tip {
+  border-top-color: rgb(189, 236, 236);
+}
+
+.popup button {
+  background-color: rgb(189, 236, 236);
+}
