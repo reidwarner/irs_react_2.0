@@ -45,7 +45,7 @@ function App() {
       <header>
         <h1>Indian River Social</h1>
         <h4>Discover and share Indian River boating hangouts</h4>
-        <h6>Click on a <img className='icon' src="/island-with-two-trees-svgrepo-com.svg"/> to see the activity. Double click on the map to add a new location.</h6>
+        <h6>Click on a <img className='icon' src="/island-with-two-trees-svgrepo-com.svg"/> to see activity. Double click the map to add a new location.</h6>
       </header>
       <body className='map-container'>
         <Map

@@ -7,24 +7,25 @@ header {
 }
 
 header h1 {
-  margin-bottom: 0px; 
+  margin-bottom: 0%; 
   font-family: fantasy;
 }
 
 header h4 {
-  margin-bottom: 0px;
+  margin-bottom: 0%;
 }
 
 header h6 {
-  margin-bottom: 0px;
+  margin-bottom: 1%;
+  text-align: center;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 2%;
+  height: 75%;
   background: rgb(189, 236, 236);
   border-radius: 50%;
-  padding: 2px;
+  padding: .1%;
 }
 
 body {
@@ -33,7 +34,7 @@ body {
 }
 
 .map-container {
-  margin: 0px 100px 10px 100px;
+  margin: 0px 5% 0% 5%;
   border: 4px solid rgb(189, 236, 236);
   border-radius: 5px;
   height: 75vh;
