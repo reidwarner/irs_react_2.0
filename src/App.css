@@ -72,7 +72,7 @@ footer {
 .blog-container {
   display: flex;
   flex-direction: column;
-  flex-basis: 40%;
+  flex-basis: 53%;
   background-image: url("/sand-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
@@ -80,7 +80,6 @@ footer {
   color: white;
   border: 4px solid rgb(189, 236, 236);
   border-radius: 4px;
-  align-self: flex-end;
 }
 
 .blog-header {
