@@ -70,7 +70,7 @@ footer {
   display: flex;
   flex-direction: column;
   flex-basis: 53%;
-  background-image: url("../public/sand-background.jpg");
+  background-image: url("/sand-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

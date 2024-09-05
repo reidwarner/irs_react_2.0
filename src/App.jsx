@@ -4,6 +4,8 @@ import Map, {Marker, Popup} from 'react-map-gl';
 import { useState, useEffect } from 'react';
 import BlogFeed from './components/BlogFeed';
 
+const BASE_URL = 'https://irs-rest-service.onrender.com';
+
 function App() {
   const [lngLat, setLngLat] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -12,7 +14,7 @@ function App() {
   
   const addNewLocation = async () => {
     const response = await fetch(
-        '/locations', {
+        BASE_URL + '/locations', {
         method: 'POST',
         headers: {'Content-type': 'application/json'},
         body: JSON.stringify({lat: lngLat.lat, long: lngLat.lng})
@@ -29,7 +31,7 @@ function App() {
   }
 
   const loadLocations = async () => {
-    const response = await fetch("/locations");
+    const response = await fetch(BASE_URL + "/locations");
     const location_data = await response.json();
     setLocations(location_data)
   }
@@ -88,7 +90,8 @@ function App() {
           <BlogFeed 
           location={selectedLocation} 
           setSelectedLocation={setSelectedLocation}
-          setMapSize={setMapSize}/>
+          setMapSize={setMapSize}
+          BASE_URL={BASE_URL}/>
         </div>
         )}
       </body>

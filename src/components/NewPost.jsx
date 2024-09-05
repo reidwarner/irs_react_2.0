@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function NewPost({ location, setShowFeed, setShowAddPost, loadBlogPost }){
+function NewPost({ location, setShowFeed, setShowAddPost, loadBlogPost, BASE_URL }){
     const [user, setUser] = useState('');
     const [text, setText] = useState('');
 
@@ -19,7 +19,7 @@ function NewPost({ location, setShowFeed, setShowAddPost, loadBlogPost }){
             }
         console.log(newPost)
         const response = await fetch(
-            '/blog', {
+            BASE_URL + '/blog', {
                 method: 'POST',
                 headers: {'Content-type': 'application/json'},
                 body: JSON.stringify(newPost)

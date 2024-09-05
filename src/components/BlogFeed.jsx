@@ -3,7 +3,7 @@ import BlogPost from './BlogPost';
 import BlogUserOptions from './BlogUserOptions';
 import NewPost from './NewPost';
 
-function BlogFeed({location, setSelectedLocation, setMapSize}){
+function BlogFeed({location, setSelectedLocation, setMapSize, BASE_URL}){
 
     const [showFeed, setShowFeed] = useState(true);
     const [showAddPost, setShowAddPost] = useState(false);
@@ -14,7 +14,7 @@ function BlogFeed({location, setSelectedLocation, setMapSize}){
     let no_posts = blogPosts.length === 0;
 
     const loadBlogPost = async () => {
-        const response = await fetch(`/blog/${location._id}`);
+        const response = await fetch(BASE_URL + `/blog/${location._id}`);
         if (response.status === 200){
             const blog_post_data = await response.json();
             setBlogPosts(blog_post_data);
@@ -50,7 +50,7 @@ function BlogFeed({location, setSelectedLocation, setMapSize}){
                     </div>}
                 { showAddPost &&
                     <div>
-                        <NewPost location={location} setShowFeed={setShowFeed} setShowAddPost={setShowAddPost} loadBlogPost={loadBlogPost}/>
+                        <NewPost location={location} setShowFeed={setShowFeed} setShowAddPost={setShowAddPost} loadBlogPost={loadBlogPost} BASE_URL={BASE_URL}/>
                     </div>
                 }
             </div>
