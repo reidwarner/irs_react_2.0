@@ -9,10 +9,12 @@ header {
 header h1 {
   margin-bottom: 0%; 
   font-family: fantasy;
+  text-align: center;
 }
 
 header h4 {
   margin-bottom: 0%;
+  text-align: center;
 }
 
 header h6 {
@@ -70,7 +72,7 @@ footer {
 .blog-container {
   display: flex;
   flex-direction: column;
-  flex-basis: 48%;
+  flex-basis: 40%;
   background-image: url("/sand-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
