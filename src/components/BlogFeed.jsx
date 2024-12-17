@@ -51,7 +51,7 @@ function BlogFeed({token, location, setSelectedLocation, setMapSize, BASE_URL}){
                 <h2 class="inline text-2xl font-bold text-blue-250 mb-4 mt-14">Longitude: {location_long}</h2>
             </div>
             <BlogUserOptions setShowFeed={setShowFeed} setShowAddPost={setShowAddPost}/>
-            <div class="h-1/2 overflow-scroll p-4 feed-container custom-scrollbar">
+            <div class="h-2/3 overflow-scroll p-4 feed-container custom-scrollbar">
                 { showFeed && 
                     <div>
                         { no_posts ? (
