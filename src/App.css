@@ -8,7 +8,7 @@ header {
 
 header h1 {
   margin-bottom: 0%; 
-  font-family: fantasy;
+  font-family: 'New Rocker';
   text-align: center;
 }
 
@@ -216,4 +216,10 @@ footer {
 
 .popup button {
   background-color: rgb(189, 236, 236);
+}
+
+.custom-scrollbar {
+  overflow: scroll;
+  scrollbar-width: auto;  /* Options: auto, thin, none */
+  scrollbar-color: black #f3f4f6;  /* Thumb color and Track color */
 }

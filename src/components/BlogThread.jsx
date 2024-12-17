@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import ReplyPost from './ReplyPost';
 
-function BlogPost({item, location, BASE_URL, token, setShowFeed, setShowAddPost, loadBlogPost, setShowThread, showThread, showReply, setShowReply}){
+function BlogThread({item, location, BASE_URL, token, setShowFeed, setShowAddPost, loadBlogPost, setShowThread, showThread, showReply, setShowReply}){
 
     const [likes, setLikes] = useState(item.likers);
 
@@ -52,14 +52,15 @@ function BlogPost({item, location, BASE_URL, token, setShowFeed, setShowAddPost,
         
         return formattedDate;
     }
-    if (item.is_reply == false){
+    
+    if (item.reply_to == showThread){
         return (
             <>
-                <div class="ml-4 py-2 items-center text-sm text-gray-500 bg-white border border-black rounded-lg mb-1" id={item.id}>
+                <div class="ml-16 py-2 items-center text-sm text-gray-500 bg-white border border-black rounded-lg mb-1">
                     <p class="ml-2 inline mr-4">@<span class="font-semibold text-gray-800">{item.user_name}</span></p>
                     <p class="inline">{date}</p>
                     <p class="ml-6 mb-4 mt-4 font-bold">{item.user_text}</p>
-                    <div class="inline ml-2 space-x-5">
+                    <div class="inline ml-2 space-x-1">
                         <button class="inline focus:outline-none"
                             onClick={(e) => {
                                 e.preventDefault()
@@ -81,17 +82,6 @@ function BlogPost({item, location, BASE_URL, token, setShowFeed, setShowAddPost,
                                 }}>
                             Reply
                         </button>
-                        <button class="text-sm text-gray-600 hover:text-blue-500 focus:outline-none"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                if (item.id == showThread){
-                                    setShowThread(null);
-                                } else{
-                                    setShowThread(item.id);
-                                }
-                            }}>
-                            Show Replies
-                        </button>
                     </div>
                 </div>
                 { showReply == item.id && (
@@ -100,6 +90,7 @@ function BlogPost({item, location, BASE_URL, token, setShowFeed, setShowAddPost,
             </>
         )
     }
+    
 }
 
-export default BlogPost
+export default BlogThread

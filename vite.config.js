@@ -7,10 +7,10 @@ export default defineConfig({
   server: {
     proxy: {
       '/locations': {
-        target: "http://localhost:3000"
+        target: "http://localhost:5000"
       },
       '/blog': {
-        target: "http://localhost:3000"
+        target: "http://localhost:5000"
       }
     }
   }
