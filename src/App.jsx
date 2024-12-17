@@ -21,24 +21,6 @@ function App() {
   const [token, setToken] = useState('');
   const [userName, setUserName] = useState(null);
 
-  const addNewLocation = async () => {
-    const response = await fetch(
-        BASE_URL + '/locations', {
-        method: 'POST',
-        headers: {'Content-type': 'application/json'},
-        body: JSON.stringify({lat: lngLat.lat, long: lngLat.lng})
-      }
-    );
-    if(response.status === 201){
-      alert("Succesfully added the location");
-      setSelectedLocation(await response.json())
-      loadLocations();
-    }else {
-        alert("Failed to add location, status code = " + response.status);
-    }
-    setLngLat(null);
-  }
-
   const loadLocations = async () => {
     const response = await fetch(BASE_URL + "/locations");
     const location_data = await response.json();
@@ -76,9 +58,9 @@ function App() {
               logOut();}}
               >Log Out</button>
         </div>
-          <h1 class="text-7xl font-bold text-blue-250 mb-4 mt-14">Indian River Social</h1>
+          <h1 class="text-7xl font-extrabold text-transparent bg-cyan-200 bg-clip-text mb-6 mt-12 shadow-lg shadow-gray-900">Indian River Social</h1>
           <h4 class="text-2xl font-bold text-blue-250 mb-12">Discover and share Indian River boating hangouts</h4>
-          <h6 class="text-lg text-blue-250 mb-0">Click on a <img src="/island-with-two-trees-svgrepo-com.svg" className="w-12 h-auto inline-block icon"/> to see activity. Double click the map to add a new location.</h6>
+          <h6 class="text-lg text-blue-250 mb-0">Click on a <img src="/island-with-two-trees-svgrepo-com.svg" className="w-12 h-auto inline-block icon"/> to see activity. Double click the map suggest a new location.</h6>
         </header>
         <body className='map-container' class="flex justify-center mt-2">
           <div class="w-75 border-4 border-gray-300 shadow-lg">
@@ -112,11 +94,19 @@ function App() {
                   longitude={lngLat.lng}
                   onClose={() => setLngLat(null)}
                   className='popup'>
-                    <button onClick={(e) => {
+                    <p>Suggest a New Location</p>
+                    <textarea
+                      placeholder='Tell us about this location'
+                      class="w-32 h-28 self-center">
+                    </textarea>
+                    <br></br>
+                    <button 
+                    class="self-center w-15 h-8 px-3 py-1 mb-2 bg-white text-black font-semibold rounded shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300"
+                    onClick={(e) => {
                       e.preventDefault()
-                      addNewLocation()
+                      setLngLat(null)
                     }}>
-                      Start New Location</button>
+                      Submit</button>
                 </Popup>
               )}
               {selectedLocation && (

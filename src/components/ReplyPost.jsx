@@ -50,7 +50,7 @@ function ReplyPost({ token, location, post, setShowFeed, setShowAddPost, loadBlo
             <h3 class="justify-self-start ml-2 font-semibold text-left text-sm">Replying to @{post.user_name}</h3>
             <textarea
                 className="post-text"
-                class="w-96 h-full px-4 py-2 mt-4 text-gray-700 font-semibold border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-4/5 h-full px-4 py-2 mt-4 text-gray-700 font-semibold border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter text here"
                 value={text}
                 onChange={e => setText(e.target.value)}/>

@@ -204,18 +204,42 @@ footer {
 
 .popup .mapboxgl-popup-content {
   background-color: rgb(189, 236, 236);
+  font-weight: 600;
+}
+
+.popup .mapboxgl-popup-content button{
+  margin-left: 4em;
+  margin-right: auto;
+}
+
+.popup .mapboxgl-popup-content textarea{
+  margin-left: 1em;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  padding: 1em;
+}
+
+.popup .mapboxgl-popup-content p{
+  margin-left: 0.5em;
+  margin-right: auto;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
 }
 
 .popup .mapboxgl-popup-close-button {
   background-color: rgb(189, 236, 236);
+  padding-right: 0.5em;
+  margin-right: 2em;
 }
 
 .popup .mapboxgl-popup-tip {
+  border-bottom-color: rgb(189, 236, 236);
   border-top-color: rgb(189, 236, 236);
-}
-
-.popup button {
-  background-color: rgb(189, 236, 236);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
 }
 
 .custom-scrollbar {
