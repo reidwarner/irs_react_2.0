@@ -7,7 +7,7 @@ import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 
 //const BASE_URL = 'https://irs-rest-service.onrender.com';
-const BASE_URL = 'http://104.248.235.195:5000'
+const BASE_URL = 'https://www.indianriversocial.website'
 
 function App() {
   const [lngLat, setLngLat] = useState(null);
