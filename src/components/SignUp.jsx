@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SignUp({setMapSize, setShowSignUp, setShowLogIn, BASE_URL}){
+function SignUp({setShowSignUp, setShowLogIn, BASE_URL}){
     const [email, setEmail] = useState('');
     const [f_name, setFName] = useState('');
     const [l_name, setLName] = useState('');

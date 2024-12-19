@@ -3,7 +3,8 @@ header {
   flex-direction: column;
   align-items: center;
   background-color: black;
-  color: rgb(189, 236, 236)
+  color: rgb(189, 236, 236);
+  font-family: 'Raleway';
 }
 
 header h1 {
@@ -32,7 +33,7 @@ header h6 {
 
 body {
   background-color: black;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+  font-family:'Raleway';
 }
 
 .map-container {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function LogIn({setToken, setMapSize, setShowLogIn, BASE_URL}){
+function LogIn({setToken, setShowLogIn, BASE_URL}){
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -20,7 +20,6 @@ function LogIn({setToken, setMapSize, setShowLogIn, BASE_URL}){
         );
         if(response.status === 201){
             let data = await response.json();
-            console.log(data.user);
             setToken(data.token);
             localStorage.setItem('jwt', data.token);
             localStorage.setItem('currentUserID', data.user.id);

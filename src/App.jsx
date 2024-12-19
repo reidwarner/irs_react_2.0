@@ -12,7 +12,6 @@ const BASE_URL = 'https://www.indianriversocial.website'
 function App() {
   const [lngLat, setLngLat] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState(null);
-  const [mapSize, setMapSize] = useState(["75vw", "60vh"]);
   const [locations, setLocations] = useState([]);
 
   const [showSignUp, setShowSignUp] = useState(false);
@@ -50,7 +49,7 @@ function App() {
     return (
       <>
         <header>
-        <div class="absolute top-0 right-0 mt-4 mr-4 text-white inline-block">
+        <div class="absolute top-0 right-0 mt-0 mr-4 text-white inline-block">
           <p class="inline">Hello, {userName} | </p>
           <button class="inline px-3 py-3 h-18 rounded-full bg-black text-white text-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-200 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" onClick={(e) => {
               e.preventDefault();
@@ -67,10 +66,9 @@ function App() {
               class="w-40 h-96 bg-gray-200"
               mapboxAccessToken='pk.eyJ1IjoicmVpZG9zaW5nbGV0b24iLCJhIjoiY20wMTZtcGp4MGdtYjJtcHpxY3hmbzFxZiJ9.U5bWS_-9Y23T_qCyUKaK_A'
               maxBounds={[-80.7, 27.3, -80.2, 29]}
-              style={{width: mapSize[0], height: mapSize[1]}}
+              style={{width: "75vw", height: "60vh"}}
               mapStyle="mapbox://styles/mapbox/standard-satellite"
               onDblClick={e => {
-                setMapSize(["95vw", "75vh"])
                 setLngLat(e.lngLat)
               }}>
               {locations.map((coord) => (
@@ -81,7 +79,6 @@ function App() {
                   <button className="marker-btn" onClick={(e) => {
                     e.preventDefault();
                     setSelectedLocation(coord);
-                    //setMapSize(["45vw", "75vh"]);
                   }}
                   >
                     <img src="/island-with-two-trees-svgrepo-com.svg" alt="island icon"/>
@@ -115,7 +112,6 @@ function App() {
                 token={token}
                 location={selectedLocation} 
                 setSelectedLocation={setSelectedLocation}
-                //setMapSize={setMapSize}
                 BASE_URL={BASE_URL}/>
                 </div>
               </div>
@@ -149,15 +145,15 @@ function App() {
         <body className='map-container' class="flex justify-center mt-2">
           <div class="w-75 border-4 border-gray-300 shadow-lg">
             <Map
+              class="w-40 h-96 bg-gray-200"
               mapboxAccessToken='pk.eyJ1IjoicmVpZG9zaW5nbGV0b24iLCJhIjoiY20wMTZtcGp4MGdtYjJtcHpxY3hmbzFxZiJ9.U5bWS_-9Y23T_qCyUKaK_A'
               maxBounds={[-80.7, 27.3, -80.2, 29]}
-              style={{width: mapSize[0], height: mapSize[1]}}
+              style={{width: "95vw", height: "75vw"}}
               mapStyle="mapbox://styles/mapbox/standard-satellite"
             >
             {showLogIn && (
             <div class="absolute inset-0 z-10 bg-gray-900 bg-opacity-50 flex justify-center items-center">
               <LogIn
-              setMapSize={setMapSize}
               setShowLogIn={setShowLogIn}
               setToken={setToken}
               BASE_URL={BASE_URL}/>
@@ -166,7 +162,6 @@ function App() {
             {showSignUp && (
             <div class="absolute inset-0 z-10 bg-gray-900 bg-opacity-50 flex justify-center items-center">
               <SignUp
-              setMapSize={setMapSize}
               setShowSignUp={setShowSignUp}
               setShowLogIn={setShowLogIn}
               BASE_URL={BASE_URL}/>

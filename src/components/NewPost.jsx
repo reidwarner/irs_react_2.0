@@ -40,11 +40,11 @@ function NewPost({ token, location, setShowFeed, setShowAddPost, loadBlogPost, B
             <h3 class="font-semibold text-center text-xl">New Post</h3>
             <textarea
                 className="post-text"
-                class="w-full h-full px-4 py-2 text-gray-700 font-semibold border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                class="w-full h-full px-4 py-4 text-gray-700 font-semibold border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 placeholder="Enter text here"
                 value={text}
                 onChange={e => setText(e.target.value)}/>
-            <button className="new-post-btn" class="w-15 h-8 px-3 py-1 mb-2 bg-gray-400 text-white font-semibold rounded shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300" onClick={addPost}>Post</button>
+            <button className="new-post-btn" class="w-15 h-8 px-3 py-1 mt-1 mb-1 bg-gray-400 text-white font-semibold rounded shadow-lg hover:bg-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300 transition duration-300" onClick={addPost}>Post</button>
     </>
     )
 }
