@@ -34,8 +34,8 @@ function LogIn({setToken, setShowLogIn, BASE_URL}){
 
     return (
         <>
-            <div className="log-in-container" class='bg-white py-3 px-5 rounded-lg shadow-lg w-1/2 h-2/5'>
-            <h3 className="log-in-title" class="font-semibold text-center text-2xl">Log In</h3>
+            <div className="log-in-container" class='realtive bg-white py-4 px-5 rounded-lg shadow-lg w-1/2'>
+                <h3 className="log-in-title" class="font-semibold text-center text-2xl">Log In</h3>
                 <label class="block text-gray-700 font-semibold mb-2">Email:<br></br>
                     <input
                         type="email"

@@ -148,7 +148,7 @@ function App() {
               class="w-40 h-96 bg-gray-200"
               mapboxAccessToken='pk.eyJ1IjoicmVpZG9zaW5nbGV0b24iLCJhIjoiY20wMTZtcGp4MGdtYjJtcHpxY3hmbzFxZiJ9.U5bWS_-9Y23T_qCyUKaK_A'
               maxBounds={[-80.7, 27.3, -80.2, 29]}
-              style={{width: "95vw", height: "75vw"}}
+              style={{width: "75vw", height: "60vh"}}
               mapStyle="mapbox://styles/mapbox/standard-satellite"
             >
             {showLogIn && (

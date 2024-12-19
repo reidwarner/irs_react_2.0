@@ -35,7 +35,7 @@ function SignUp({setShowSignUp, setShowLogIn, BASE_URL}){
 
     return (
         <>
-            <div className="signup-container" class='bg-white py-3 px-5 rounded-lg shadow-lg w-1/2 h-4/5'>
+            <div className="signup-container" class='relative bg-white py-5 px-5 rounded-lg shadow-lg w-1/2'>
                 <h3 className="signup-title" class="font-semibold text-center text-2xl mt-1 mb-2">Sign Up</h3>
                 <label class="block text-gray-700 font-semibold mb-2">Email:<br></br>
                     <input
