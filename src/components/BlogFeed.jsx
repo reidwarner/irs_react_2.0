@@ -50,7 +50,7 @@ function BlogFeed({token, location, setSelectedLocation, BASE_URL}){
                 <h2 class="grid lg:inline md:inline lg:text-2xl md:text-xl font-bold text-blue-250 sm:my-1">Longitude: {location_long}</h2>
             </div>
             <BlogUserOptions setShowFeed={setShowFeed} setShowAddPost={setShowAddPost}/>
-            <div class="realtive h-3/5 overflow-y-scroll p-4 feed-container custom-scrollbar">
+            <div class="realtive overflow-y-scroll p-4 custom-scrollbar">
                 { showFeed && 
                     <div>
                         { no_posts ? (
