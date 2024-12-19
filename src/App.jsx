@@ -2,7 +2,6 @@ import './App.css';
 import * as React from 'react';
 import Map, {Marker, Popup} from 'react-map-gl';
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import BlogFeed from './components/BlogFeed';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
