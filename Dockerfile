@@ -8,13 +8,13 @@ WORKDIR /app
 EXPOSE 5173
 
 # Step 3: Copy package.json and package-lock.json (or yarn.lock) to install dependencies
-COPY package*.json
+COPY package*.json ./
 
 # Step 4: Install the dependencies
-RUN npm install 
+RUN npm install --silent
 
 # Step 5: Copy the rest of the application code
-COPY . .
+COPY . ./
 
 # Step 8: Start the application (you can serve it with a simple static server)
 CMD ["npm", "run", "dev"]
