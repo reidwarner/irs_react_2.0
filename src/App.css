@@ -246,9 +246,3 @@ footer {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
 }
-
-.custom-scrollbar {
-  overflow: scroll;
-  scrollbar-width: auto;  /* Options: auto, thin, none */
-  scrollbar-color: black #f3f4f6;  /* Thumb color and Track color */
-}
