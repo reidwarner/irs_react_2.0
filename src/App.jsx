@@ -8,7 +8,7 @@ import LogIn from './components/LogIn';
 
 //const BASE_URL = 'https://irs-rest-service.onrender.com';
 // const BASE_URL = 'https://www.indianriversocial.website'
-const BASE_URL = 'http://172.19.0.3:5000';
+const BASE_URL = 'http://admiring_lamport:5000';
 
 function App() {
   const [lngLat, setLngLat] = useState(null);
