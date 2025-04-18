@@ -33,7 +33,7 @@ function App() {
       localStorage.removeItem('currentUserName');
       setToken(null);
       setUserName(null);
-      window.location.href = '/';
+      window.location.href = '/irs/';
   };
 
   useEffect( () => {
@@ -59,7 +59,7 @@ function App() {
         </div>
           <h1 class="text-7xl font-extrabold text-transparent bg-cyan-200 bg-clip-text mb-6 mt-12 shadow-lg shadow-gray-900">Indian River Social</h1>
           <h4 class="text-2xl font-bold text-blue-250 mb-12">Discover and share Indian River boating hangouts</h4>
-          <h6 class="text-lg text-blue-250 mb-0">Click on a <img src="/island-with-two-trees-svgrepo-com.svg" className="w-12 h-auto inline-block icon"/> to see activity. Double click the map suggest a new location.</h6>
+          <h6 class="text-lg text-blue-250 mb-0">Click on a <img src="./island-with-two-trees-svgrepo-com.svg" className="w-12 h-auto inline-block icon"/> to see activity. Double click the map suggest a new location.</h6>
         </header>
         <body className='map-container' class="flex justify-center mt-2">
           <div class="w-75 border-4 border-gray-300 shadow-lg">
@@ -82,7 +82,7 @@ function App() {
                     setSelectedLocation(coord);
                   }}
                   >
-                    <img src="/island-with-two-trees-svgrepo-com.svg" alt="island icon"/>
+                    <img src="./island-with-two-trees-svgrepo-com.svg" alt="island icon"/>
                   </button>
                 </Marker>
               ))}
