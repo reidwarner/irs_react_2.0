@@ -26,7 +26,7 @@ function LogIn({setToken, setShowLogIn, BASE_URL}){
             localStorage.setItem('currentUserName', data.user.name);
             alert("Succesfully logged in.");
             await setShowLogIn(false)
-            window.location.href = '/';
+            window.location.href = '/irs/';
         }else {
             alert("Failed to login, status code = " + response.status);
         }
